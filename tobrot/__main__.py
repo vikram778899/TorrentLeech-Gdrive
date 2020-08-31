@@ -96,7 +96,7 @@ if __name__ == "__main__" :
     #
     incoming_clone_handler = MessageHandler(
         g_clonee,
-        filters=filters.command(["gclone"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command(["gclone@drivetg_bot"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_clone_handler)
     #
