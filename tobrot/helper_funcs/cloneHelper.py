@@ -41,7 +41,6 @@ class CloneHelper:
         self.lsg = ""
         self.filee = ""
         self.u_id = self.mess.from_user.id
-	td_join = f"https://groups.google.com/u/0/g/test_group005"
         
     
     def config(self):
