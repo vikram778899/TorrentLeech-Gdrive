@@ -140,10 +140,9 @@ class CloneHelper:
                     indexurl = f"{INDEX_LINK}/{self.name}"
                 else:
                     indexurl = f"{INDEX_LINK}/{self.name}/"
-                tam_link = requests.utils.requote_uri(indexurl) td_link = f"https://groups.google.com/u/0/g/test_group005
-		
-                LOGGER.info(tam_link)
-		
+                tam_link = requests.utils.requote_uri(indexurl)
+		td_link = f"https://groups.google.com/u/0/g/test_group005"
+                LOGGER.info(tam_link)		
 		button.append([pyrogram.InlineKeyboardButton(text="📂 Join TeamDrive 📂", url=f"{td_link}")])
                 button.append([pyrogram.InlineKeyboardButton(text="ℹ️ IndexUrl ℹ️", url=f"{tam_link}")])
             button_markup = pyrogram.InlineKeyboardMarkup(button)
