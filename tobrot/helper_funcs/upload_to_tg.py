@@ -163,6 +163,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         LOGGER.info(gautam)
         LOGGER.info(tam.decode('utf-8'))
         #os.remove("filter.txt")
+        td_join = f"https://groups.google.com/u/0/g/test_group005"
         gauti = f"https://drive.google.com/file/d/{gautam}/view?usp=drivesdk"
         gau_link = re.search("(?P<url>https?://[^\s]+)", gauti).group("url")
         LOGGER.info(gau_link)
@@ -177,7 +178,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
             tam_link = requests.utils.requote_uri(indexurl)
             LOGGER.info(tam_link)
             button.append([pyrogram.InlineKeyboardButton(text="ℹ️ IndexUrl ℹ️", url=f"{tam_link}")])
-            button.append([pyrogram.InlineKeyboardButton(text="☔ Join TeamDrive ☔", url=f"{https://groups.google.com/u/0/g/test_group005 }")])
+            button.append([pyrogram.InlineKeyboardButton(text="☔ Join TeamDrive ☔", url=f"{td_join}")])
         button_markup = pyrogram.InlineKeyboardMarkup(button)
         await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
         await messa_ge.reply_text(f"🤖: {file_upload} has been Uploaded successfully to your Cloud <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay}", reply_markup=button_markup)
